@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Nunito+Sans:wght@400;600;700&display=swap');
+
+:root {
+  --bg-1: #f7f4ef;
+  --bg-2: #f0ece7;
+  --text: #2c2a37;
+  --muted: #5f5a69;
+  --paper: rgba(255, 255, 255, 0.78);
+  --accent: #2d6cdf;
+  --accent-soft: #9fbff4;
+  --ring: #1b3f78;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', 'Segoe UI', sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+  background: linear-gradient(160deg, var(--bg-1), var(--bg-2));
+}
+
+.page-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(47, 108, 216, 0.13), transparent 35%),
+    radial-gradient(circle at 85% 0%, rgba(31, 173, 190, 0.18), transparent 35%),
+    linear-gradient(135deg, #f7f4ef, #f0ece7);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.6rem;
+  backdrop-filter: blur(10px);
+  background: rgba(247, 244, 239, 0.62);
+  border-bottom: 1px solid rgba(40, 40, 80, 0.08);
+}
+
+.logo {
+  font-family: 'Merriweather', Georgia, serif;
+  color: var(--ring);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: border 180ms ease, transform 180ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+nav a.active {
+  border-color: var(--accent);
+  background: rgba(45, 108, 223, 0.08);
+}
+
+.content-wrap {
+  max-width: 900px;
+  margin: 2.2rem auto;
+  padding: 0 1.2rem;
+  display: grid;
+  gap: 1.4rem;
+}
+
+.hero,
+.section {
+  animation: floatup 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero { animation-delay: 80ms; }
+#about { animation-delay: 120ms; }
+#publications { animation-delay: 160ms; }
+#education { animation-delay: 200ms; }
+
+.hero {
+  padding: 2rem;
+}
+
+.eyebrow {
+  color: var(--accent);
+  margin: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0.7rem 0;
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(1.7rem, 4.2vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.section,
+.hero {
+  background: var(--paper);
+  border: 1px solid rgba(45, 108, 223, 0.2);
+  border-radius: 18px;
+  padding: 1.6rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 14px 30px rgba(35, 44, 90, 0.09);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 0.6rem;
+  padding: 0.6rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.meta-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+
+.pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.pub-list li {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 1rem;
+  border-left: 3px solid var(--accent-soft);
+  padding-left: 0.8rem;
+}
+
+.pub-meta {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.pub-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.timeline {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.timeline li {
+  margin: 0.8rem 0;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem 2.2rem;
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+@media (max-width: 650px) {
+  .site-header {
+    position: static;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pub-list li {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes floatup {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
