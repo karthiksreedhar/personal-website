@@ -186,18 +186,26 @@ h1 {
 
 .pub-list {
   list-style: none;
-  padding: 0;
+  padding: 0 0 0 0.8rem;
   margin: 0;
   display: grid;
   gap: 1rem;
+  border-left: 3px solid var(--accent-soft);
 }
 
-.pub-list li {
+.pub-layout {
   display: grid;
   grid-template-columns: 72px 1fr;
   gap: 1rem;
-  border-left: 3px solid var(--accent-soft);
-  padding-left: 0.8rem;
+  align-items: start;
+}
+
+.pub-year {
+  padding-top: 0.2rem;
+}
+
+.pub-list li {
+  display: block;
 }
 
 .pub-meta {
@@ -234,8 +242,12 @@ footer {
     align-items: flex-start;
   }
 
-  .pub-list li {
+  .pub-layout {
     grid-template-columns: 1fr;
+  }
+
+  .pub-list {
+    padding-left: 0.7rem;
   }
 
   .hero {
