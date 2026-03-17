@@ -96,8 +96,9 @@ nav a.active {
 
 .hero { animation-delay: 80ms; }
 #about { animation-delay: 120ms; }
-#publications { animation-delay: 160ms; }
-#education { animation-delay: 200ms; }
+#selected-work { animation-delay: 160ms; }
+#publications { animation-delay: 200ms; }
+#education { animation-delay: 240ms; }
 
 .hero {
   padding: 2rem;
@@ -227,6 +228,55 @@ h1 {
   font-size: 1rem;
 }
 
+.work-list {
+  display: grid;
+  gap: 0;
+  margin-top: 0.4rem;
+}
+
+.work-item {
+  display: grid;
+  grid-template-columns: minmax(220px, 34%) 1fr;
+  gap: 1.2rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid rgba(40, 40, 80, 0.12);
+}
+
+.work-item:first-child {
+  border-top: 0;
+  padding-top: 0.5rem;
+}
+
+.work-image-wrap {
+  border: 1px solid rgba(45, 108, 223, 0.2);
+  border-radius: 12px;
+  background: rgba(244, 248, 255, 0.72);
+  overflow: hidden;
+}
+
+.work-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 170px;
+  object-fit: cover;
+}
+
+.work-copy h3 {
+  margin: 0;
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: clamp(1.05rem, 2.2vw, 1.45rem);
+  line-height: 1.3;
+}
+
+.work-copy p {
+  margin: 0.75rem 0 0;
+}
+
+.work-copy a {
+  color: var(--ring);
+}
+
 .timeline {
   margin: 0;
   padding-left: 1rem;
@@ -261,6 +311,11 @@ footer {
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .work-item {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
   }
 
   .hero-photo {
