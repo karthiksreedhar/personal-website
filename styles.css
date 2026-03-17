@@ -267,7 +267,7 @@ h1 {
 .work-copy h3 {
   margin: 0;
   font-family: 'Merriweather', Georgia, serif;
-  font-size: clamp(0.95rem, 1.8vw, 1.22rem);
+  font-size: clamp(0.9rem, 1.4vw, 1.06rem);
   line-height: 1.3;
 }
 
