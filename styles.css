@@ -136,6 +136,14 @@ nav a.active {
   text-decoration: underline;
 }
 
+.hero-links {
+  margin: 0;
+  font-size: 0.68rem;
+  line-height: 1.2;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
 .hero-copy {
   grid-column: 2;
 }
