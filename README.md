@@ -3,7 +3,9 @@
 This is a simple single-page personal website with these sections:
 
 - About
+- Selected Work
 - Publications
+- Experience
 - Education
 
 It is ready for GitHub Pages hosting.

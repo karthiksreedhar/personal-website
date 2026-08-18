@@ -3,47 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PhD Student | Personal Site</title>
+    <title>Karthik Sreedhar</title>
     <meta
       name="description"
-      content="Personal academic website for a PhD student with About, Publications, and Education sections."
+      content="Karthik Sreedhar is a PhD candidate in Computer Science at Columbia University, building human-AI systems and studying multi-agent LLM simulations."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&family=Inter:wght@400;450;500;600&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-bg"></div>
+    <a class="skip-link" href="#about">Skip to content</a>
 
     <header class="site-header">
-      <a class="logo" href="#home">K. Sreedhar</a>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#selected-work">Selected Work</a>
-        <a href="#publications">Publications</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-      </nav>
+      <div class="header-inner">
+        <a class="logo" href="#home">Karthik Sreedhar</a>
+        <nav aria-label="Sections">
+          <a href="#about">About</a>
+          <a href="#selected-work">Work</a>
+          <a href="#publications">Publications</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+        </nav>
+      </div>
     </header>
 
-    <main id="home" class="content-wrap">
+    <main id="home">
       <section id="about" class="hero">
         <div class="hero-aside">
           <img
             src="assets/profile.jpg"
-            alt="Portrait of Karthik"
+            alt="Portrait of Karthik Sreedhar"
             class="hero-photo"
+            width="320"
+            height="320"
           />
-          <a class="hero-email" href="mailto:ks4190@columbia.edu">ks4190@columbia.edu</a>
-          <p class="hero-links"><a href="https://drive.google.com/file/d/1pcjFCltMuKe2-jZRc8-O9ZkcPcy0etPd/view?usp=share_link">Resume</a> | <a href="https://scholar.google.com/citations?hl=en&amp;user=PhuU-G4AAAAJ&amp;view_op=list_works&amp;gmla=AF9nlQvTlPCFYxlLc2YHOVISYWqZS1KE2zzA3AAXdOmw2ZpobPLfVD9t4GSqtTamrQ6_ZItQYkznSmL4LL2AcU_XusUyYb8aZB2wTQ">Google Scholar</a></p>
         </div>
         <div class="hero-copy">
-          <h1>Karthik Sreedhar</h1>
           <p class="eyebrow">PhD Candidate in Computer Science</p>
-          <p>
+          <h1>Karthik Sreedhar</h1>
+          <p class="lede">
             I am a 3rd year PhD student at Columbia University. My research
-            focuses are building human AI systems to empower productivity and
-            creativity as well as running simulations with multi-agent LLM
+            focuses are building human-AI systems to empower productivity and
+            creativity, as well as running simulations with multi-agent LLM
             systems.
-            <br /><br />
+          </p>
+          <p>
             I am currently a visiting researcher at the
             <a href="https://www.media.mit.edu/groups/camera-culture/overview/">MIT Media Lab's Camera Culture group</a>,
             working with <a href="https://www.media.mit.edu/people/raskar/overview/">Professor Ramesh Raskar</a>
@@ -52,7 +61,8 @@
             a human-AI system that lets end users iteratively customize their
             email workflows by authoring new interface features and processes
             through conversational interaction.
-            <br /><br />
+          </p>
+          <p>
             I am advised by
             <a href="https://www.cs.columbia.edu/~chilton/chilton.html">Professor Lydia Chilton</a>
             and am part of the
@@ -60,10 +70,15 @@
             and the
             <a href="https://www.cs.columbia.edu/~chilton/">Computational Design Lab</a>.
           </p>
+          <p class="hero-contact">
+            <a href="mailto:ks4190@columbia.edu">ks4190@columbia.edu</a>
+            <a href="https://drive.google.com/file/d/1pcjFCltMuKe2-jZRc8-O9ZkcPcy0etPd/view?usp=share_link">Resume</a>
+            <a href="https://scholar.google.com/citations?hl=en&amp;user=PhuU-G4AAAAJ&amp;view_op=list_works&amp;gmla=AF9nlQvTlPCFYxlLc2YHOVISYWqZS1KE2zzA3AAXdOmw2ZpobPLfVD9t4GSqtTamrQ6_ZItQYkznSmL4LL2AcU_XusUyYb8aZB2wTQ">Google Scholar</a>
+          </p>
         </div>
       </section>
 
-      <section id="selected-work" class="section card">
+      <section id="selected-work" class="section">
         <h2>Selected Work</h2>
         <div class="work-list">
           <article class="work-item">
@@ -72,21 +87,22 @@
                 src="assets/paper1.png"
                 alt="Figure from Simulating Cooperative Prosocial Behavior paper"
                 class="work-image"
+                loading="lazy"
               />
             </div>
             <div class="work-copy">
               <h3>
-                Simulating Cooperative Prosocial Behavior with Multi-Agent LLMs: Evidence and Mechanisms for AI Agents to Inform Policy Decisions
+                <a href="https://arxiv.org/pdf/2502.12504">Simulating Cooperative Prosocial Behavior with Multi-Agent LLMs: Evidence and Mechanisms for AI Agents to Inform Policy Decisions</a>
               </h3>
+              <p class="work-venue">IUI 2025</p>
               <p>
                 Demonstrates that multi-agent LLM systems can realistically
-                simulate human prosocial behavior-both replicating controlled
-                lab experiments and generating complex, real-world
-                interactions-suggesting their potential as tools for exploring
-                and informing policy decisions.
+                simulate human prosocial behavior &mdash; both replicating
+                controlled lab experiments and generating complex, real-world
+                interactions &mdash; suggesting their potential as tools for
+                exploring and informing policy decisions.
               </p>
-              <p>IUI 2025</p>
-              <p><a href="https://arxiv.org/pdf/2502.12504">[pdf]</a></p>
+              <p class="work-links"><a href="https://arxiv.org/pdf/2502.12504">PDF</a></p>
             </div>
           </article>
 
@@ -96,127 +112,113 @@
                 src="assets/paper2.png"
                 alt="Figure from DynEx paper"
                 class="work-image"
+                loading="lazy"
               />
             </div>
             <div class="work-copy">
               <h3>
-                DynEx: Dynamic Code Synthesis with Structured Design Exploration for Accelerated Exploratory Programming
+                <a href="https://arxiv.org/pdf/2410.00400">DynEx: Dynamic Code Synthesis with Structured Design Exploration for Accelerated Exploratory Programming</a>
               </h3>
+              <p class="work-venue">CHI 2025</p>
+              <p class="awards">
+                <span class="award">Best Paper Honorable Mention</span>
+                <span class="award-note">top 5% of submissions</span>
+              </p>
               <p>
                 Introduces DynEx, an LLM-powered system that helps users
                 explore design spaces and iteratively generate functional UI
                 prototypes, bridging the gap between idea conception and
                 implementation.
               </p>
-              <p>CHI 2025</p>
-              <p><a href="https://arxiv.org/pdf/2410.00400">[pdf]</a></p>
+              <p class="work-links"><a href="https://arxiv.org/pdf/2410.00400">PDF</a></p>
             </div>
           </article>
         </div>
       </section>
 
-      <section id="publications" class="section card">
+      <section id="publications" class="section">
         <h2>Publications</h2>
+
         <div class="pub-layout">
-          <div class="pub-meta pub-year">2027</div>
+          <h3 class="pub-year">2027</h3>
           <ul class="pub-list">
             <li>
-              <p class="pub-title">"Conversational Customization of Productivity Systems: A Design Probe of Malleable AI Interfaces."</p>
-              <p><strong>Karthik Sreedhar</strong>, Lydia B. Chilton.</p>
-              <p>
-                Under review, ACM Conference on Intelligent User Interfaces.
-              </p>
+              <p class="pub-title">Conversational Customization of Productivity Systems: A Design Probe of Malleable AI Interfaces</p>
+              <p class="pub-authors"><strong>Karthik Sreedhar</strong>, Lydia B. Chilton</p>
+              <p class="pub-venue">Under review, ACM Conference on Intelligent User Interfaces (IUI)</p>
             </li>
             <li>
-              <p class="pub-title"><a href="https://arxiv.org/abs/2504.09662">"AgentDynEx: Nudging the Mechanics and Dynamics of Multi-Agent Simulations."</a></p>
-              <p>Jenny Ma, Riya Sahni, <strong>Karthik Sreedhar</strong>, Lydia B. Chilton.</p>
-              <p>
-                ACM Conference on Human-AI Complementarity and Alignment.
-              </p>
+              <p class="pub-title"><a href="https://arxiv.org/abs/2504.09662">AgentDynEx: Nudging the Mechanics and Dynamics of Multi-Agent Simulations</a></p>
+              <p class="pub-authors">Jenny Ma, Riya Sahni, <strong>Karthik Sreedhar</strong>, Lydia B. Chilton</p>
+              <p class="pub-venue">ACM Conference on Human-AI Complementarity and Alignment</p>
             </li>
             <li>
-              <p class="pub-title">"Permeable Artifacts and Synthetic Organizational Forms: Action Design Research for the Institutional Press."</p>
-              <p>Shiyan Zhang, Jocelyn McKinnon-Crowley, Alice Cai, <strong>Karthik Sreedhar</strong>, Lydia B. Chilton, Jeffrey V. Nickerson.</p>
-              <p>
-                Management Information Systems Quarterly.
-              </p>
+              <p class="pub-title">Permeable Artifacts and Synthetic Organizational Forms: Action Design Research for the Institutional Press</p>
+              <p class="pub-authors">Shiyan Zhang, Jocelyn McKinnon-Crowley, Alice Cai, <strong>Karthik Sreedhar</strong>, Lydia B. Chilton, Jeffrey V. Nickerson</p>
+              <p class="pub-venue">Management Information Systems Quarterly</p>
             </li>
           </ul>
         </div>
+
         <div class="pub-layout">
-          <div class="pub-meta pub-year">2025</div>
+          <h3 class="pub-year">2025</h3>
           <ul class="pub-list">
             <li>
-              <p class="pub-title"><a href="https://dl.acm.org/doi/full/10.1145/3708359.3712149">"Simulating Cooperative Prosocial Behavior with Multi-Agent LLMs: Evidence and Mechanisms for AI Agents to Inform Policy Decisions."</a></p>
-              <p><strong>Karthik Sreedhar</strong>, Alice Cai, Jenny Ma, Jeffrey V. Nickerson, Lydia B. Chilton.</p>
-              <p>
-                ACM Conference on Intelligent User Interfaces.
+              <p class="pub-title"><a href="https://dl.acm.org/doi/full/10.1145/3708359.3712149">Simulating Cooperative Prosocial Behavior with Multi-Agent LLMs: Evidence and Mechanisms for AI Agents to Inform Policy Decisions</a></p>
+              <p class="pub-authors"><strong>Karthik Sreedhar</strong>, Alice Cai, Jenny Ma, Jeffrey V. Nickerson, Lydia B. Chilton</p>
+              <p class="pub-venue">ACM Conference on Intelligent User Interfaces (IUI)</p>
+            </li>
+            <li>
+              <p class="pub-title"><a href="https://www.cs.columbia.edu/~chilton/web/my_publications/Sreedhar_StrategicAgents_HICSS2025.pdf">Simulating Strategic Reasoning: Comparing the Ability of Single LLMs and Multi-Agent Systems to Replicate Human Behavior</a></p>
+              <p class="pub-authors"><strong>Karthik Sreedhar</strong>, Lydia B. Chilton</p>
+              <p class="pub-venue">Hawaii International Conference on System Sciences (HICSS)</p>
+              <p class="awards">
+                <span class="award">Best Paper Nominee</span>
+                <span class="award-note">one nomination per minitrack</span>
               </p>
             </li>
             <li>
-              <p class="pub-title"><a href="https://www.cs.columbia.edu/~chilton/web/my_publications/Sreedhar_StrategicAgents_HICSS2025.pdf">"Simulating Strategic Reasoning: Comparing the Ability of Single LLMs and Multi-Agent Systems to Replicate Human Behavior."</a></p>
-              <p><strong>Karthik Sreedhar</strong>, Lydia B. Chilton.</p>
-              <p>
-                Hawaii International Conference on System Sciences - best paper nominee.
+              <p class="pub-title"><a href="https://dl.acm.org/doi/10.1145/3706598.3714115">DynEx: Dynamic Code Synthesis with Structured Design Exploration for Accelerated Exploratory Programming</a></p>
+              <p class="pub-authors">Jenny Ma, <strong>Karthik Sreedhar</strong>, Vivian Liu, Sitong Wang, Pedro Alejandro Perez, Riya Sahni, Lydia B. Chilton</p>
+              <p class="pub-venue">ACM Conference on Human Factors in Computing Systems (CHI)</p>
+              <p class="awards">
+                <span class="award">Best Paper Honorable Mention</span>
+                <span class="award-note">top 5% of submissions</span>
               </p>
             </li>
             <li>
-              <p class="pub-title"><a href="https://dl.acm.org/doi/10.1145/3706598.3714115">"DynEx: Dynamic Code Synthesis with Structured Design Exploration for Accelerated Exploratory Programming."</a></p>
-              <p>Jenny Ma, <strong>Karthik Sreedhar</strong>, Vivian Liu, Sitong Wang, Pedro Alejandro Perez, Riya Sahni, Lydia B. Chilton.</p>
-              <p>
-                ACM Conference on Human Factors in Computing Systems - best paper honorable mention.
-              </p>
-            </li>
-            <li>
-              <p class="pub-title">"Simulating Social Influence in Media Contexts using Multi-Agent LLMs: Replicating the Dynamics of Recommendations and Silence."</p>
-              <p><strong>Karthik Sreedhar</strong>.</p>
-              <p>
-                Master's thesis, Columbia University.
-              </p>
+              <p class="pub-title">Simulating Social Influence in Media Contexts using Multi-Agent LLMs: Replicating the Dynamics of Recommendations and Silence</p>
+              <p class="pub-authors"><strong>Karthik Sreedhar</strong></p>
+              <p class="pub-venue">Master's thesis, Columbia University</p>
             </li>
           </ul>
         </div>
       </section>
 
-      <section id="education" class="section card">
-        <h2>Education</h2>
-        <ol class="timeline">
-          <li>
-            <strong>PhD in Computer Science</strong> — Columbia University, 2023-Present
-          </li>
-          <li>
-            <strong>M.S. Computer Science and M.S. Journalism</strong> — Columbia University, 2023-2025
-          </li>
-          <li>
-            <strong>B.S. Electrical Engineering &amp; Computer Science, B.A. Applied Mathematics, B.A. History, Minor in Data Science</strong> — University of California, Berkeley, 2019-2023
-          </li>
-        </ol>
-      </section>
-
-      <section id="experience" class="section card">
+      <section id="experience" class="section">
         <h2>Experience</h2>
-        <ol class="exp-list">
+        <ol class="entry-list">
           <li>
-            <div class="exp-head">
+            <div class="entry-head">
               <strong>Visiting Researcher</strong>
-              <span class="exp-dates">June 2026 &ndash; present</span>
+              <span class="entry-dates">June 2026 &ndash; present</span>
             </div>
-            <p class="exp-org">MIT Media Lab, Camera Culture group &mdash; PI: Ramesh Raskar</p>
+            <p class="entry-org">MIT Media Lab, Camera Culture group &mdash; PI: Ramesh Raskar</p>
             <p>
               Built a 1,000-agent simulation platform for privacy-preserving
               demand aggregation, asking whether personal AI agents can surface
               latent consumer demand without exposing what any individual user
-              wants. Adaptive multicast search finds interested users at 3-4X
+              wants. Adaptive multicast search finds interested users at 3&ndash;4&times;
               lower message cost than broadcast, evaluated against ground-truth
               recall.
             </p>
           </li>
           <li>
-            <div class="exp-head">
+            <div class="entry-head">
               <strong>Graduate Researcher</strong>
-              <span class="exp-dates">June 2023 &ndash; present</span>
+              <span class="entry-dates">June 2023 &ndash; present</span>
             </div>
-            <p class="exp-org">Columbia University, DAPLAB &amp; Computational Design Lab &mdash; Advisor: Lydia B. Chilton</p>
+            <p class="entry-org">Columbia University, DAPLAB &amp; Computational Design Lab &mdash; Advisor: Lydia B. Chilton</p>
             <p>
               Testing whether multi-agent LLM systems reproduce human behavior
               faithfully enough to serve as instruments for evaluating policy,
@@ -226,11 +228,11 @@
             </p>
           </li>
           <li>
-            <div class="exp-head">
+            <div class="entry-head">
               <strong>Lecturer</strong>
-              <span class="exp-dates">May 2021 &ndash; Jan 2023</span>
+              <span class="entry-dates">May 2021 &ndash; Jan 2023</span>
             </div>
-            <p class="exp-org">University of California, Berkeley</p>
+            <p class="entry-org">University of California, Berkeley</p>
             <p>
               Lead lecturer and content creator for two accredited courses,
               teaching 300+ cumulative students and managing 10+ TAs: Stat 198,
@@ -239,11 +241,11 @@
             </p>
           </li>
           <li>
-            <div class="exp-head">
+            <div class="entry-head">
               <strong>AI &amp; Data Science Analyst</strong>
-              <span class="exp-dates">June 2022 &ndash; Aug 2022</span>
+              <span class="entry-dates">June 2022 &ndash; Aug 2022</span>
             </div>
-            <p class="exp-org">JP Morgan, Asset &amp; Wealth Management AI Engineering</p>
+            <p class="entry-org">JP Morgan, Asset &amp; Wealth Management AI Engineering</p>
             <p>
               Built client-prospecting models over the firm's knowledge graph of
               existing and prospective high-net-worth clients. Implemented the
@@ -254,11 +256,11 @@
             </p>
           </li>
           <li>
-            <div class="exp-head">
+            <div class="entry-head">
               <strong>Research Assistant</strong>
-              <span class="exp-dates">Oct 2019 &ndash; May 2021</span>
+              <span class="entry-dates">Oct 2019 &ndash; May 2021</span>
             </div>
-            <p class="exp-org">Algorithms for Computing &amp; Education Lab, UC Berkeley &mdash; PI: Armando Fox</p>
+            <p class="entry-org">Algorithms for Computing &amp; Education Lab, UC Berkeley &mdash; PI: Armando Fox</p>
             <p>
               Instrumenting how student teams actually build software to improve
               how engineering is taught and evaluated, including a multi-year
@@ -268,10 +270,41 @@
           </li>
         </ol>
       </section>
+
+      <section id="education" class="section">
+        <h2>Education</h2>
+        <ol class="entry-list">
+          <li>
+            <div class="entry-head">
+              <strong>PhD in Computer Science</strong>
+              <span class="entry-dates">2023 &ndash; present</span>
+            </div>
+            <p class="entry-org">Columbia University</p>
+          </li>
+          <li>
+            <div class="entry-head">
+              <strong>M.S. Computer Science and M.S. Journalism</strong>
+              <span class="entry-dates">2023 &ndash; 2025</span>
+            </div>
+            <p class="entry-org">Columbia University</p>
+          </li>
+          <li>
+            <div class="entry-head">
+              <strong>B.S. Electrical Engineering &amp; Computer Science</strong>
+              <span class="entry-dates">2019 &ndash; 2023</span>
+            </div>
+            <p class="entry-org">University of California, Berkeley</p>
+            <p>
+              B.A. Applied Mathematics, B.A. History, and a minor in Data
+              Science.
+            </p>
+          </li>
+        </ol>
+      </section>
     </main>
 
     <footer>
-      <p>© 2026 K. Sreedhar • Built for GitHub Pages</p>
+      <p>Karthik Sreedhar &middot; Columbia University &middot; <a href="mailto:ks4190@columbia.edu">ks4190@columbia.edu</a></p>
     </footer>
 
     <script src="script.js"></script>
