@@ -99,6 +99,7 @@ nav a.active {
 #selected-work { animation-delay: 160ms; }
 #publications { animation-delay: 200ms; }
 #education { animation-delay: 240ms; }
+#experience { animation-delay: 280ms; }
 
 .hero {
   padding: 2rem;
@@ -286,6 +287,40 @@ h1 {
 .timeline {
   margin: 0;
   padding-left: 1rem;
+}
+
+.exp-list {
+  list-style: none;
+  margin: 0.4rem 0 0;
+  padding: 0 0 0 0.8rem;
+  display: grid;
+  gap: 1.1rem;
+  border-left: 3px solid var(--accent-soft);
+}
+
+.exp-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.exp-dates {
+  color: var(--muted);
+  font-size: 0.86rem;
+  white-space: nowrap;
+}
+
+.exp-org {
+  margin: 0.15rem 0 0;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.exp-list p:last-child {
+  margin: 0.45rem 0 0;
 }
 
 .timeline li {
